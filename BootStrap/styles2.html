@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 5 Exercises</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      padding-top: 70px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar (Exercise 10.1, 6.1) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="bi bi-bootstrap-fill"></i> Brand</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex flex-column flex-md-row justify-content-between align-items-center" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-md-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+      </ul>
+      <form class="d-flex mt-2 mt-md-0" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- Typography (Exercise 7.1, 7.2) -->
+  <section class="my-5">
+    <h1 class="display-1 fw-bold text-center">Welcome to Bootstrap 5</h1>
+    <p class="lead text-muted text-center">This is a lead paragraph styled with Bootstrap utilities.</p>
+    <p class="text-uppercase text-center">uppercase text example</p>
+    <p class="text-lowercase text-center">LOWERCASE TEXT EXAMPLE</p>
+    <p class="text-capitalize text-center">capitalize each word example</p>
+  </section>
+
+  <!-- Responsive Grid (Exercise 3.1, 3.2, 4.1, 4.2) -->
+  <section class="my-5">
+    <h2>Responsive Grid</h2>
+    <div class="container border p-3">
+      <div class="row mb-4">
+        <div class="col-12 col-sm-6 col-md-4 border p-2 text-center">Column 1</div>
+        <div class="col-12 col-sm-6 col-md-4 border p-2 text-center">Column 2</div>
+        <div class="col-12 col-sm-6 col-md-4 border p-2 text-center">Column 3</div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-3 bg-light border p-3">Sidebar (col-md-3)</div>
+        <div class="col-md-9 border p-3">Main content (col-md-9)</div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-sm-3 border p-2">Col 1</div>
+        <div class="col-sm-3 border p-2">Col 2</div>
+        <div class="col-sm-3 border p-2">Col 3</div>
+        <div class="col-sm-3 border p-2">Col 4</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alignment and Reordering (Exercise 5.1, 5.2) -->
+  <section class="my-5">
+    <h2>Alignment and Reordering</h2>
+    <div class="row justify-content-center align-items-center" style="height: 100px; background:#e9ecef;">
+      <div class="col-6 bg-primary text-white text-center p-3">Centered content</div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-6 order-md-2 bg-warning p-3">Second on desktop</div>
+      <div class="col-md-6 order-md-1 bg-info p-3">First on desktop</div>
+    </div>
+  </section>
+
+  <!-- Buttons (Exercise 9.1, 9.2) -->
+  <section class="my-5">
+    <h2>Buttons & Button Groups</h2>
+    <button class="btn btn-primary me-2">Primary</button>
+    <button class="btn btn-secondary me-2">Secondary</button>
+    <button class="btn btn-outline-danger me-2">Outline Danger</button>
+
+    <div class="btn-group mt-3" role="group" aria-label="Toggle buttons">
+      <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" />
+      <label class="btn btn-outline-primary" for="btncheck1">Toggle 1</label>
+
+      <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" />
+      <label class="btn btn-outline-primary" for="btncheck2">Toggle 2</label>
+    </div>
+  </section>
+
+  <!-- Forms (Exercise 8.1, 8.2) -->
+  <section class="my-5">
+    <h2>Forms</h2>
+    <form>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input id="username" type="text" class="form-control" placeholder="Enter username" />
+      </div>
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="agree" />
+        <label for="agree" class="form-check-label">I agree to terms</label>
+      </div>
+      <button type="submit" class="btn btn-success">Register</button>
+    </form>
+
+    <form class="mt-5">
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" />
+        <label for="floatingEmail">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+        <label for="floatingPassword">Password</label>
+      </div>
+      <button class="btn btn-primary mt-3" type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Cards (Exercise 11.1, 11.2, 15.2) -->
+  <section class="my-5">
+    <h2>Cards</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card shadow-lg rounded-pill">
+          <img src="https://via.placeholder.com/300x180" class="card-img-top rounded-pill" alt="Profile" />
+          <div class="card-body">
+            <h5 class="card-title">John Doe</h5>
+            <p class="card-text">A simple profile card example.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="d-flex align-items-start">
+          <img src="https://via.placeholder.com/100" alt="media" class="me-3 rounded-circle border border-primary border-3" />
+          <div>
+            <h5>Media Object Title</h5>
+            <p>This layout aligns an image to the left of the content using flexbox.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spacing Utilities (Exercise 12.1, 12.2) -->
+  <section class="my-5 bg-light p-5">
+    <h2 class="mb-4">Spacing Utilities & Pricing Section</h2>
+    <div class="row text-center">
+      <div class="col p-4 border m-3 rounded">Basic Plan</div>
+      <div class="col p-4 border m-3 rounded bg-primary text-white">Pro Plan</div>
+      <div class="col p-4 border m-3 rounded">Enterprise Plan</div>
+    </div>
+  </section>
+
+  <!-- Colors and Backgrounds (Exercise 13.1, 13.2) -->
+  <section class="my-5">
+    <h2>Colors and Backgrounds</h2>
+    <div class="p-3 bg-primary text-white mb-3">Primary Background</div>
+    <div class="p-3 bg-warning text-dark mb-3">Warning Background</div>
+    <div class="p-3 bg-dark bg-gradient text-white rounded">Dark Gradient Background</div>
+  </section>
+
+  <!-- Display & Visibility (Exercise 14.1, 14.2) -->
+  <section class="my-5">
+    <h2>Display and Visibility</h2>
+    <div class="d-none d-md-block bg-info text-white p-3 mb-3">Visible on md and larger</div>
+    <aside class="d-none d-md-block col-md-3 bg-secondary text-white p-3">Sidebar only on tablet and up</aside>
+  </section>
+
+  <!-- Borders & Shadows (Exercise 15.1, 15.2) -->
+  <section class="my-5">
+    <h2>Borders, Shadows, and Rounded Corners</h2>
+    <img src="https://via.placeholder.com/150" class="border border-primary border-3 rounded-circle me-3" alt="Rounded" />
+    <div class="card shadow shadow-lg rounded-pill p-3 d-inline-block">
+      This card has shadows and rounded-pill style.
+    </div>
+  </section>
+
+  <!-- Positioning Utilities (Exercise 16.1, 16.2) -->
+  <section class="my-5 position-relative" style="height: 150px;">
+    <h2>Positioning Utilities</h2>
+    <img src="https://via.placeholder.com/150" alt="Image" class="rounded" />
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      99+
+    </span>
+  </section>
+
+</div>
+
+<!-- Fixed Footer (Exercise 16.1) -->
+<footer class="bg-dark text-white text-center py-3 position-fixed bottom-0 w-100">
+  Bootstrap 5 Demo Footer
+</footer>
+
+<!-- Modal Trigger (Exercise 18.1) -->
+<div class="container my-5 text-center">
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Open Modal</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        This is a Bootstrap 5 modal popup example.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle JS (Includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
