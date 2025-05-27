@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #eaeaea url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+.nav-menu {
+    list-style-type: none;
+    background-color: #007BFF;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+#mainHeader {
+    text-align: center;
+    margin: 20px 0;
+    background-color: #e0f7fa;
+    padding: 20px;
+}
+
+
+.highlight {
+    background-color: #ffd54f;
+    padding: 5px;
+}
+.eventCard {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+
+.event-img {
+    width: 100px;
+    height: auto;
+    border: 2px solid gray;
+    padding: 5px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+table caption {
+    caption-side: top;
+    font-weight: bold;
+    padding: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fdfdfd;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #00695c;
+    background: linear-gradient(to right, #26a69a, #80cbc4);
+    color: white;
+    padding: 10px;
+}
+
+h3, p {
+    color: #444;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: left;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}
